@@ -6,7 +6,7 @@
 
 let express = require('express')
 let app = express();
-const apiRouter = require("./assgn-router.js");
+const assgnRouter = require("./assgn-router.js");
 let mongoose = require("mongoose");
 let bodyParser = require("body-parser");
 
@@ -27,7 +27,7 @@ if(!db) {
 
 var port = 8080;
 
-app.use("/api", apiRouter);
+app.use('/assgn-api', assgnRouter);
 
 app.get('/', (req, res) => res.send('Hello World with Express'));
 
